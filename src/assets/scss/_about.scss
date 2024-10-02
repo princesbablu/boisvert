@@ -1,0 +1,146 @@
+.about {
+    &-title {
+        margin-bottom: 170px;
+        @include xl {
+            margin-bottom: 140px;
+        }
+        @include lg {
+            margin-bottom: 100px;
+        }
+        @include mmd {
+            margin-bottom: 80px;
+        }
+        @include sm {
+            margin-bottom: 40px;
+        }
+    }
+    &-wrap {
+        background-image: url(/src/assets/img/about-bg.gif);
+        background-repeat: no-repeat;
+        background-position: 26px;
+        background-size: contain;
+        height: 95%;
+        mix-blend-mode: hard-light;
+        @include mmd {
+            flex-wrap: wrap;
+            justify-content: center;
+            background-size: cover;
+            text-align: center;
+        }
+        &-left {
+            max-width: 41.66%;
+            flex: 0 0 auto;
+            @include mmd {
+                max-width: none;
+            }
+            @include ssm {
+                flex: unset;
+                text-align: center;
+            }
+            & img {
+                max-width: 413px;
+                @include xl {
+                    max-width: 330px;
+                }
+                @include lg {
+                    max-width: 280px;
+                }
+                @include mmd {
+                    max-width: 352px;
+                }
+                @include ssm {
+                    max-width: 310px;
+                }
+            }
+            & h2 {
+                margin-top: -50px;
+                margin-left: 14px;
+                text-align: left;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #000;
+                color: rgba(0, 0, 0, 0);
+                background: var(--liner, linear-gradient(-8deg, #fff 86%, rgba(255, 255, 255, 0) 0%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: rgba(0, 0, 0, 0);
+                @include lg {
+                    margin-top: -30px;
+                }
+                @include mmd {
+                    margin-top: 16px;
+                    -webkit-text-stroke-width: 2px;
+                }
+                @include sm {
+                    color: $white;
+                    text-align: center;
+                }
+            }
+        }
+        &-right {
+            max-width: 100%;
+            & p {
+                @include font-27;
+            }
+            & .p1 {
+                max-width: 448px;
+                padding-top: 50px;
+                @include lg {
+                    padding-top: 16px;
+                }
+                @include mmd {
+                    padding-top: 16px;
+                    margin: 0 auto;
+                }
+            }
+            & .p2 {
+                max-width: 624px;
+                padding-left: 120px;
+                @include lg {
+                    padding-left: 76px;
+                }
+                @include mmd {
+                    padding-left: 0;
+                    margin: 0 auto;
+                }
+            }
+            &-btn {
+                margin-bottom: 55px;
+                padding-left: 244px;
+                gap: 12px;
+                @include xl {
+                    padding-left: 176px;
+                }
+                @include lg {
+                    padding-left: 00px;
+                    margin-bottom: 30px;
+                }
+                @include mmd {
+                    padding-left: 0px;
+                    margin-bottom: 24px;
+                }
+                @include sm {
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    margin-top: 24px;
+                }
+            }
+            & .bottom {
+                margin-top: 437px;
+                @include lg {
+                    margin-top: 276px;
+                }
+                @include mmd {
+                    margin-top: 30px;
+                }
+                @include sm {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    margin-top: 24px;
+                }
+                @include sm {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.cta {
+    padding-bottom: 380px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include xl {
+        padding-bottom: 300px;
+    }
+    @include lg {
+        padding-bottom: 260px;
+    }
+    @include md {
+        padding-bottom: 200px;
+    }
+    @include sm {
+        padding-bottom: 200px;
+    }
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 82px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/banner-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: .4;
+    }
+    & .img {
+        & img {
+            width: 763px;
+            height: 525px;
+            @include lg {
+                width: 762px;
+                height: auto;
+            }
+            @include mmd {
+                width: 762px;
+                height: auto;
+            }
+        }
+    }
+    &-content {
+        & h3 {
+            font-size: 77px;
+            margin-bottom: 52px;
+            padding-left: 18px;
+            @include xl {
+                font-size: 70px;
+            }
+            @include lg {
+                font-size: 48px;
+            }
+            @include mmd {
+                font-size: 48px;
+                margin-bottom: 24px;
+            }
+            @include sm {
+                font-size: 30px;
+            }
+        }
+        &-btn {
+            & .btn {
+                &:nth-child(2) {
+                    width: 141px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

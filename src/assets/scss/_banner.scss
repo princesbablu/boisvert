@@ -1,0 +1,83 @@
+.banner {
+    padding-top: 267px;
+    padding-bottom: 50px;
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include lg {
+        padding-top: 170px;
+    }
+    @include mmd {
+        padding-top: 150px;
+    }
+    &-img {
+        position: relative;
+        min-height: 693px;
+        @include mmd {
+            min-height: 565px;
+        }
+        @include sm {
+            min-height: none;
+            display: flex;
+            flex-direction: column;
+        }
+        & .item {
+            position: absolute;
+            @include transition;
+            transform: scale(1);
+            width: 400px;
+            height: 450px;
+            padding: 5px;
+            background-color: $white;
+            @include xl {
+                width: 370px;
+            }
+            @include lg {
+                width: 340px;
+                height: 390px;
+            }
+            @include mmd {
+                width: 280px;
+            }
+            &:hover {
+                transform: scale(1.05);
+                z-index: 9;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: 1px solid $black;
+            }
+        }
+        & .img1 {
+            left: 0;
+            bottom: 17px;
+            transform: rotate(-6.02deg);
+        }
+        & .img2 {
+            right: 45px;
+            bottom: 24px;
+            transform: rotate(6.02deg);
+        }
+        & .img3 {
+            left: 50%;
+            top: 0;
+            margin-left: -206px;
+            z-index: 2;
+            @include lg {
+                top: 46px;
+            }
+            @include mmd {
+                top: 46px;
+            }
+        }
+    }
+    &-btn {
+        gap: 12px;
+        @include sm {
+            margin-top: 24px;
+        }
+    }
+}
